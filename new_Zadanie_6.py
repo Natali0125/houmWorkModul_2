@@ -1,6 +1,4 @@
-def end_list(s):
-    s = []
-    return s
+
 
 def calculate_structure_sum(data_structure):
     end_sum = 0
@@ -10,7 +8,7 @@ def calculate_structure_sum(data_structure):
             end_sum += calculate_structure_sum(value)
     elif isinstance(data_structure, (list, tuple, set)):
         for item in data_structure:
-            end_sum = calculate_structure_sum(item)
+            end_sum += calculate_structure_sum(item)
     elif isinstance(data_structure (int, float)):
         end_sum += data_structure
         #end_list().append(data_structure)
